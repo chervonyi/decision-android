@@ -7,4 +7,7 @@
     <string name="proposeToRestart">Try to discover a different ending for yourself!</string>
     <string name="restartButton">Restart</string>
     <string name="endGameText">THE END</string>
+    <string name="englishLanguageButton">ENGLISH</string>
+    <string name="russianLanguageButton">РУССКИЙ</string>
+    <string name="ukrainianLanguageButton">УКРАЇНСЬКА</string>
 </resources>

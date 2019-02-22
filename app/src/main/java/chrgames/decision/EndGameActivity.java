@@ -1,5 +1,6 @@
 package chrgames.decision;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ public class EndGameActivity extends AppCompatActivity {
     }
 
     public void onClickRestart(View view) {
-        Toast.makeText(this, "Restart", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Restart", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, LanguageActivity.class));
     }
 }

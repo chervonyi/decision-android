@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ChapterActivity" />
-        <activity android:name=".EndGameActivity"></activity>
+        <activity android:name=".EndGameActivity" />
+        <activity android:name=".LanguageActivity"></activity>
     </application>
 
 </manifest>
