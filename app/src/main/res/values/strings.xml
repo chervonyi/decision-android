@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Decision</string>
+    <string name="disclaimer1">Warning!</string>
+    <string name="disclaimer2">Each of your decisions affects the plot.</string>
+    <string name="disclaimer3">Make the choice wisely!</string>
+    <string name="info_about_tap">[ Always tap to continue ]</string>
 </resources>

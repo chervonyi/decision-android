@@ -3,4 +3,17 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+
+    <!-- BACKGROUND -->
+    <color name="backgroundBlack">#131313</color>
+
+
+
+    <!-- FONTS -->
+    <color name="fontWhite">#efefef</color>
+    <color name="fontLightGrey">#868484</color>
+
+    <!-- OTHER -->
+
 </resources>
