@@ -36,24 +36,24 @@
                 android:id="@+id/textViewDisclaimer2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
                 android:textColor="@color/fontWhite"
                 android:textAlignment="center"
-                android:textSize="26sp"
+                android:textSize="20sp"
                 android:text="@string/disclaimer2" />
 
             <TextView
                 android:id="@+id/textViewDisclaimer3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
                 android:textColor="@color/fontWhite"
                 android:textAlignment="center"
-                android:textSize="26sp"
+                android:textSize="20sp"
                 android:text="@string/disclaimer3" />
 
         </LinearLayout>
@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/fontLightGrey"
                 android:textAlignment="center"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:text="@string/info_about_tap" />
         </LinearLayout>
     </LinearLayout>

@@ -4,4 +4,7 @@
     <string name="disclaimer2">Each of your decisions affects the plot.</string>
     <string name="disclaimer3">Make the choice wisely!</string>
     <string name="info_about_tap">[ Always tap to continue ]</string>
+    <string name="proposeToRestart">Try to discover a different ending for yourself!</string>
+    <string name="restartButton">Restart</string>
+    <string name="endGameText">THE END</string>
 </resources>
