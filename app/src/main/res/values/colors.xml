@@ -7,6 +7,7 @@
 
     <!-- BACKGROUND -->
     <color name="backgroundBlack">#131313</color>
+    <color name="backgroundTextBox">#ea131313</color>
 
 
 

@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".ChapterActivity" />
         <activity android:name=".EndGameActivity" />
-        <activity android:name=".LanguageActivity"></activity>
+        <activity android:name=".LanguageActivity" />
+        <activity android:name=".StageActivity"></activity>
     </application>
 
 </manifest>
