@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundBlack"
-    tools:context=".DisclaimerActivity">
+    tools:context=".ChapterActivity">
 
 
     <LinearLayout
@@ -23,17 +23,17 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textViewDisclaimer1"
+                android:id="@+id/textViewChapterNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:textColor="@color/fontWhite"
                 android:textAlignment="center"
-                android:textSize="30sp"
-                android:text="@string/disclaimer1" />
+                android:textSize="28sp"
+                android:text="CHAPTER 1" />
 
             <TextView
-                android:id="@+id/textViewDisclaimer2"
+                android:id="@+id/textViewTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -42,37 +42,27 @@
                 android:textColor="@color/fontWhite"
                 android:textAlignment="center"
                 android:textSize="26sp"
-                android:text="@string/disclaimer2" />
+                android:text="Sample of title" />
 
-            <TextView
-                android:id="@+id/textViewDisclaimer3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:textColor="@color/fontWhite"
-                android:textAlignment="center"
-                android:textSize="26sp"
-                android:text="@string/disclaimer3" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textViewInfo"
+                android:id="@+id/textViewChapterDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/fontLightGrey"
+                android:textColor="@color/fontWhite"
                 android:textAlignment="center"
                 android:textSize="20sp"
-                android:text="@string/info_about_tap" />
+                android:text="10th October 1931" />
         </LinearLayout>
     </LinearLayout>
+
 
 </android.support.constraint.ConstraintLayout>
