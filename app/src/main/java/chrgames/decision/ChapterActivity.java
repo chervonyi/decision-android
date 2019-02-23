@@ -19,7 +19,7 @@ public class ChapterActivity extends AppCompatActivity {
 
         if (event.getAction() == MotionEvent.ACTION_UP) {
             //Toast.makeText(this, "PRESSED", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(this, StageActivity.class));
+            startActivity(new Intent(this, MapActivity.class));
         }
 
         return super.onTouchEvent(event);
