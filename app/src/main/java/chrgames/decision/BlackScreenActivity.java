@@ -4,14 +4,13 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
-import android.widget.Toast;
 
-public class ChapterActivity extends AppCompatActivity {
+public class BlackScreenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chapter);
+        setContentView(R.layout.activity_black_screen);
     }
 
     @Override
@@ -19,7 +18,7 @@ public class ChapterActivity extends AppCompatActivity {
 
         if (event.getAction() == MotionEvent.ACTION_UP) {
             //Toast.makeText(this, "PRESSED", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(this, BlackScreenActivity.class));
+            startActivity(new Intent(this, MapActivity.class));
         }
 
         return super.onTouchEvent(event);
