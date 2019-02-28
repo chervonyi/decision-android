@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <plot>
+    <stage type="chapter">
+        <id>AA000</id>
+        <next>AA001</next>
+    </stage>
+
     <stage type="simple">
         <id>AA001</id>
         <next>AA002</next>

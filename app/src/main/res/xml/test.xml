@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <scenario>
+    <stage type="chapter">
+        <id>AA000</id>
+        <number>Пролог</number>
+        <title></title>
+    </stage>
+
     <stage type="simple">
         <id>AA001</id>
         <text>

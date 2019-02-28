@@ -22,9 +22,7 @@ public class StageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stage);
 
-        XMLParser xmlParser = new XMLParser();
-        HashMap<String, Stage> plot = xmlParser.readPlot(getResources().getXml(R.xml.plot));
-        xmlParser.readScenario(getResources().getXml(R.xml.test), plot);
+
     }
 
 }

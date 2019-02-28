@@ -54,7 +54,7 @@ public class XMLParser {
     }
 
 
-    public void readScenario(XmlResourceParser xmlFile, HashMap<String, Stage> plot) {
+    public HashMap<String, Stage> readScenario(XmlResourceParser xmlFile, HashMap<String, Stage> plot) {
         eventType = -1;
         xml = xmlFile;
 
@@ -103,7 +103,7 @@ public class XMLParser {
 
         }
 
-        // TODO: update instance of Plot
+        return plot;
     }
 
     private String getNextTag(String tagName) throws XmlPullParserException, IOException {

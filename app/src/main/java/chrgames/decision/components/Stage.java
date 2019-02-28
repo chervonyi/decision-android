@@ -77,4 +77,40 @@ public class Stage {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    public String getID() {
+        return ID;
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public ArrayList<String> getText() {
+        return text;
+    }
+
+    public ArrayList<String> getChoices() {
+        return choices;
+    }
+
+    public String getNextID() {
+        return nextID;
+    }
+
+    public ArrayList<String> getNextIDforChoices() {
+        return nextIDforChoices;
+    }
+
+    public String getNumberOfChapter() {
+        return numberOfChapter;
+    }
+
+    public String getTitle() {
+        return title;
+    }
 }
