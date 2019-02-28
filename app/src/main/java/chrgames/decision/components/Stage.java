@@ -2,20 +2,79 @@ package chrgames.decision.components;
 
 import android.util.Log;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Stage {
+
+    public enum Type {
+        SIMPLE,
+        CHOICE,
+        CHAPTER,
+        BLACK,
+        MAP
+    }
+
     private final String TAG = "MY_TEST";
+
+    // States
+    private String ID;
+    private Type type;
+    private String image;
+
+    private ArrayList<String> text;
+    private ArrayList<String> choices;
+
+    private String nextID;
+    private ArrayList<String> nextIDforChoices;
+
+    private String numberOfChapter;
+    private String title;
+
+
+    // Constructors
 
     public Stage() {}
 
-    public Stage(String id, String type, String next1) {
-        Log.d(TAG, "Created Stage with: \n" + id + "\n" + type + "\n" + next1 + "\n\n");
+    public Stage(String id, String type, String next) {
+        this.ID = id;
+        setType(type);
+        this.nextID = next;
     }
 
-    public Stage(String id, String type, String next1, String next2) {
-        Log.d(TAG, "Created Stage with: \n" + id + "\n" + type + "\n" + next1 + "\n" + next2 + "\n\n");
+    public Stage(String id, String type, ArrayList<String> nextIDs) {
+        this.ID = id;
+        setType(type);
+        this.nextIDforChoices = nextIDs;
     }
 
-    public Stage(String id, String type, String next1, String next2, String next3) {
-        Log.d(TAG, "Created Stage with: \n" + id + "\n" + type + "\n" + next1 + "\n" + next2 + "\n" + next3 +"\n\n");
+    private void setType(String type) {
+        switch (type) {
+            case "simple": this.type = Type.SIMPLE; break;
+            case "chapter": this.type = Type.CHAPTER; break;
+            case "choice": this.type = Type.CHOICE; break;
+            case "map": this.type = Type.MAP; break;
+            case "black": this.type = Type.BLACK; break;
+        }
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public void setText(ArrayList<String> text) {
+        this.text = text;
+    }
+
+    public void setChoices(ArrayList<String> choices) {
+        this.choices = choices;
+    }
+
+    public void setNumberOfChapter(String numberOfChapter) {
+        this.numberOfChapter = numberOfChapter;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

@@ -8,8 +8,10 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 
 import chrgames.decision.R;
+import chrgames.decision.components.Stage;
 import chrgames.decision.components.XMLParser;
 
 public class StageActivity extends AppCompatActivity {
@@ -20,9 +22,9 @@ public class StageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stage);
 
-
         XMLParser xmlParser = new XMLParser();
-        xmlParser.readPlot(this.getResources().getXml(R.xml.plot));
+        HashMap<String, Stage> plot = xmlParser.readPlot(getResources().getXml(R.xml.plot));
+        xmlParser.readScenario(getResources().getXml(R.xml.test), plot);
     }
 
 }
