@@ -13,6 +13,9 @@ import chrgames.decision.activities.StageActivity;
 public class Dispatcher {
     private static final String TAG = "MY_TEST";
 
+    public static final String NEXT_STAGE_ID = "idOfNextStage";
+
+
     public static void send(Context context, String nextID) {
 
         Intent intent;
@@ -55,7 +58,7 @@ public class Dispatcher {
                 intent = new Intent(context, StageActivity.class);
         }
 
-        intent.putExtra("idOfNextStage", nextID);
+        intent.putExtra(NEXT_STAGE_ID, nextID);
         context.startActivity(intent);
     }
 

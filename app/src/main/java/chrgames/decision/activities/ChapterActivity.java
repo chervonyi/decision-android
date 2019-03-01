@@ -23,7 +23,7 @@ public class ChapterActivity extends AppCompatActivity {
 
         // Getting extra from intent
         Intent intent = getIntent();
-        currentStage = Plot.getInstance().getStageById(intent.getStringExtra("idOfNextStage"));
+        currentStage = Plot.getInstance().getStageById(intent.getStringExtra(Dispatcher.NEXT_STAGE_ID));
 
         // Set content
         TextView textViewChapterNumber = findViewById(R.id.textViewChapterNumber);
