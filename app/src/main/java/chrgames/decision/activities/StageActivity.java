@@ -26,7 +26,6 @@ public class StageActivity extends AppCompatActivity {
     private TextView textViewChoice1;
     private TextView textViewChoice2;
     private TextView textViewChoice3;
-    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +36,9 @@ public class StageActivity extends AppCompatActivity {
 
         // Getting extra
         Intent intent = getIntent();
-        stage = Plot.getInstance().getStageById(intent.getStringExtra(Dispatcher.NEXT_STAGE_ID));
+        stage = Plot.getInstance().getStageById(intent.getStringExtra(Dispatcher.NEXT_STAGE_ID_CODE));
 
-        imageView = findViewById(R.id.imageView);
+        ImageView imageView = findViewById(R.id.imageView);
         textViewMainBox = findViewById(R.id.textViewMainBox);
         textViewChoice1 = findViewById(R.id.textViewChoice1);
         textViewChoice2 = findViewById(R.id.textViewChoice2);

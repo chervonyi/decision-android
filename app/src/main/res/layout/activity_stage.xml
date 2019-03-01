@@ -35,6 +35,7 @@
                 android:textSize="18sp"
                 android:textColor="@color/fontWhite"
                 android:padding="20dp"
+                android:textAlignment="center"
                 android:background="@color/backgroundTextBox"
                 android:text="    — Марк, скільки вже? — запитав я.
     — 47 днів — неохоче, сонним голосом відповів Марк." />

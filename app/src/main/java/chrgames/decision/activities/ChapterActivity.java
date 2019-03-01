@@ -3,7 +3,6 @@ package chrgames.decision.activities;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.TextView;
 
@@ -23,7 +22,7 @@ public class ChapterActivity extends AppCompatActivity {
 
         // Getting extra from intent
         Intent intent = getIntent();
-        currentStage = Plot.getInstance().getStageById(intent.getStringExtra(Dispatcher.NEXT_STAGE_ID));
+        currentStage = Plot.getInstance().getStageById(intent.getStringExtra(Dispatcher.NEXT_STAGE_ID_CODE));
 
         // Set content
         TextView textViewChapterNumber = findViewById(R.id.textViewChapterNumber);
