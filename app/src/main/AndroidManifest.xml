@@ -18,12 +18,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.DisclaimerActivity"/>
+        <activity android:name=".activities.DisclaimerActivity" />
         <activity android:name=".activities.ChapterActivity" />
         <activity android:name=".activities.EndGameActivity" />
         <activity android:name=".activities.StageActivity" />
         <activity android:name=".activities.MapActivity" />
-        <activity android:name=".activities.BlackScreenActivity"/>
+        <activity android:name=".activities.BlackScreenActivity" />
+        <activity android:name=".activities.SettingsActivity"></activity>
     </application>
 
 </manifest>

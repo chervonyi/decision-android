@@ -9,6 +9,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import chrgames.decision.R;
 import chrgames.decision.components.Dispatcher;
@@ -94,5 +95,9 @@ public class MapActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    public void onClickSettings(View view) {
+        Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
     }
 }

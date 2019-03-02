@@ -9,6 +9,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import chrgames.decision.R;
 import chrgames.decision.components.Dispatcher;
@@ -140,6 +141,10 @@ public class StageActivity extends AppCompatActivity {
                 textViewChoice3.setText(stage.getChoices().get(2));
             }
         }
+    }
+
+    public void onClickSettings(View view) {
+        Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
     }
 }
 

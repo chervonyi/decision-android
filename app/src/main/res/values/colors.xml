@@ -6,7 +6,7 @@
 
 
     <!-- BACKGROUND -->
-    <color name="backgroundBlack">#131313</color>
+    <color name="backgroundBlack">#000000</color>
     <color name="backgroundTextBox">#ea131313</color>
 
 
@@ -16,5 +16,6 @@
     <color name="fontLightGrey">#868484</color>
 
     <!-- OTHER -->
+    <color name="transparent">#00ffffff</color>
 
 </resources>

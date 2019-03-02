@@ -82,6 +82,18 @@
                 android:background="@drawable/choice_button"
                 android:text="Choice 3"/>
 
+
+
         </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/imageButtonStageSettings"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@color/transparent"
+            android:onClick="onClickSettings"
+            app:srcCompat="@drawable/ic_settings" />
     </FrameLayout>
 </android.support.constraint.ConstraintLayout>
