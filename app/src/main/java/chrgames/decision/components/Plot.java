@@ -20,6 +20,7 @@ public class Plot {
 
     public Stage getStageById(String idOfStage) {
         lastStage = idOfStage;
+        Settings.saveLastStage(idOfStage);
         return vault.get(idOfStage);
     }
 
@@ -32,9 +33,11 @@ public class Plot {
         this.vault = plot;
     }
 
-    public void loadLastStageFromMemory(String stageID) {
+    public void setLastStage(String stageID) {
         lastStage = stageID;
     }
 
+
+    public String getTheFirstStageEver() { return theFirstStageEver; }
 
 }

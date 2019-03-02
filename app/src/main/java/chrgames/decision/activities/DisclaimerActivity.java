@@ -11,6 +11,7 @@ import java.util.HashMap;
 import chrgames.decision.R;
 import chrgames.decision.components.Dispatcher;
 import chrgames.decision.components.Plot;
+import chrgames.decision.components.Settings;
 import chrgames.decision.components.Stage;
 import chrgames.decision.components.XMLParser;
 
@@ -21,13 +22,21 @@ public class DisclaimerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_disclaimer);
 
+        Settings.getInstance().setContext(this);
 
         XMLParser xmlParser = new XMLParser();
         Plot.getInstance().setPlot(xmlParser.readPlot(getResources().getXml(R.xml.plot)));
 
         Plot.getInstance().setPlot(
-                xmlParser.readScenario(getResources().getXml(R.xml.test),
+                xmlParser.readScenario(getResources().getXml(R.xml.scenario_uk),
                         Plot.getInstance().getPlot()));
+
+
+
+
+        // Getting last stage from memory
+        String storedLastStage = Settings.getStoredLastStage();
+        Plot.getInstance().setLastStage(storedLastStage);
 
 
         // TODO: Get language from Memory and upload appropriate scenario

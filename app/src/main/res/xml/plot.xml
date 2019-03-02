@@ -73,7 +73,7 @@
     </stage>
     
     <stage type="choice">
-        <id>AA0014</id>
+        <id>AA014</id>
         <next>AA015</next>
         <next>AA016</next>
     </stage>
