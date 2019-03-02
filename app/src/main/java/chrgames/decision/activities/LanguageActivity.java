@@ -17,22 +17,33 @@ public class LanguageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_language);
 
-        // TODO: UNCOMENT THIS LINE Settings.getInstance().setContext(this);
+        Settings.getInstance().setContext(this);
+
+        int languageID = Settings.getStoredLanguage();
+
+        if (languageID != -1) {
+            Settings.language = Settings.Language.values()[languageID];
+
+            Intent intent = new Intent(this, DisclaimerActivity.class);
+            startActivity(intent);
+        }
+
+
     }
 
     public void onClickSelectLanguage(View view) {
 
         switch (view.getId()) {
             case R.id.buttonLanguageEN:
-                //Toast.makeText(this, "SELECTED ENGLISH", Toast.LENGTH_SHORT).show();
+                Settings.saveNewLanguage(Settings.Language.ENGLISH);
                 break;
 
             case R.id.buttonLanguageRU:
-                //Toast.makeText(this, "ВЫБРАН РУССКИЙ", Toast.LENGTH_SHORT).show();
+                Settings.saveNewLanguage(Settings.Language.RUSSIAN);
                 break;
 
             case R.id.buttonLanguageUK:
-                //Toast.makeText(this, "ОБРАНО УКРАЇНСЬКУ", Toast.LENGTH_SHORT).show();
+                Settings.saveNewLanguage(Settings.Language.UKRAINIAN);
                 break;
         }
 
