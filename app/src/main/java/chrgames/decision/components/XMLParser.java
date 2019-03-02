@@ -58,7 +58,7 @@ public class XMLParser {
         eventType = -1;
         xml = xmlFile;
 
-        while(eventType != XmlResourceParser.END_DOCUMENT) {
+        while (eventType != XmlResourceParser.END_DOCUMENT) {
 
             try {
                 if (eventType == XmlResourceParser.START_TAG &&
