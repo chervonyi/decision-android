@@ -40,4 +40,9 @@ public class Plot {
 
     public String getTheFirstStageEver() { return theFirstStageEver; }
 
+
+    public void restartGame() {
+        lastStage = theFirstStageEver;
+        Settings.saveLastStage(theFirstStageEver);
+    }
 }

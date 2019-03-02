@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import chrgames.decision.R;
+import chrgames.decision.components.Dispatcher;
+import chrgames.decision.components.Plot;
 
 public class EndGameActivity extends AppCompatActivity {
 
@@ -16,7 +18,7 @@ public class EndGameActivity extends AppCompatActivity {
     }
 
     public void onClickRestart(View view) {
-        //Toast.makeText(this, "Restart", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(this, LanguageActivity.class));
+        Plot.getInstance().restartGame();
+        Dispatcher.start(this);
     }
 }
