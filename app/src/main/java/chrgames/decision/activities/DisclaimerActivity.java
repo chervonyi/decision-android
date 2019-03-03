@@ -1,20 +1,13 @@
 package chrgames.decision.activities;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Display;
 import android.view.MotionEvent;
-import android.widget.Toast;
-
-import java.util.HashMap;
 
 import chrgames.decision.R;
 import chrgames.decision.components.Dispatcher;
 import chrgames.decision.components.Plot;
 import chrgames.decision.components.Settings;
-import chrgames.decision.components.Stage;
-import chrgames.decision.components.XMLParser;
 
 public class DisclaimerActivity extends AppCompatActivity {
 
@@ -25,20 +18,15 @@ public class DisclaimerActivity extends AppCompatActivity {
 
         Settings.getInstance().setContext(this);
 
-        XMLParser xmlParser = new XMLParser();
-        Plot.getInstance().setPlot(xmlParser.readPlot(getResources().getXml(R.xml.plot)));
+        // Load plot.xml
+        Plot.getInstance().loadPLotFromXMl(this);
 
-        Toast.makeText(this, "Selected: " + Settings.language, Toast.LENGTH_SHORT).show();
-
-        // TODO: Load appropriate scenario.xml. (Using Settings.language)
-        Plot.getInstance().setPlot(
-                xmlParser.readScenario(getResources().getXml(R.xml.scenario_uk),
-                        Plot.getInstance().getPlot()));
+        // Load scenario
+        Plot.getInstance().loadScenarioFromXML(this);
 
         // Getting last stage from memory
         String storedLastStage = Settings.getStoredLastStage();
         Plot.getInstance().setLastStage(storedLastStage);
-
     }
 
     @Override

@@ -1,15 +1,18 @@
 package chrgames.decision.components;
 
+import android.content.Context;
+import android.content.res.XmlResourceParser;
+
 import java.util.HashMap;
+
+import chrgames.decision.R;
 
 public class Plot {
     // Fields
     private static final Plot ourInstance = new Plot();
     private HashMap<String, Stage> vault;
     private String lastStage;
-    public final String theFirstStageEver = "AA000";
-
-    private Plot() {  }
+    private final String theFirstStageEver = "AA000";
 
     // Getters
     public static Plot getInstance() {
@@ -28,6 +31,8 @@ public class Plot {
         return lastStage == null ? theFirstStageEver : lastStage;
     }
 
+    public String getTheFirstStageEver() { return theFirstStageEver; }
+
     // Setters
     public void setPlot(HashMap<String, Stage> plot) {
         this.vault = plot;
@@ -37,12 +42,29 @@ public class Plot {
         lastStage = stageID;
     }
 
-
-    public String getTheFirstStageEver() { return theFirstStageEver; }
-
-
+    // Other methods
     public void restartGame() {
         lastStage = theFirstStageEver;
         Settings.saveLastStage(theFirstStageEver);
+    }
+
+    public void loadPLotFromXMl(Context context) {
+        XMLParser xmlParser = new XMLParser();
+        vault = xmlParser.readPlot(context.getResources().getXml(R.xml.plot));
+    }
+
+    public void loadScenarioFromXML(Context context) {
+        XMLParser xmlParser = new XMLParser();
+        XmlResourceParser xmlFile;
+
+        // TODO: Change UK to EN, RU when it will be imported
+        switch (Settings.language) {
+            case ENGLISH: xmlFile = context.getResources().getXml(R.xml.scenario_uk); break;
+            case RUSSIAN: xmlFile = context.getResources().getXml(R.xml.scenario_uk); break;
+            case UKRAINIAN: xmlFile = context.getResources().getXml(R.xml.scenario_uk); break;
+            default: xmlFile = context.getResources().getXml(R.xml.scenario_uk); break;
+        }
+
+        vault = xmlParser.readScenario(xmlFile, vault);
     }
 }

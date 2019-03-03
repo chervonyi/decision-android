@@ -10,7 +10,7 @@
     <string name="englishLanguageButton">ENGLISH</string>
     <string name="russianLanguageButton">РУССКИЙ</string>
     <string name="ukrainianLanguageButton">УКРАЇНСЬКА</string>
-    <string name="unpause">Continue</string>
+    <string name="resume">Continue</string>
     <string name="restart">Restart</string>
     <string name="change_language">Change language</string>
 </resources>

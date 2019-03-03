@@ -98,6 +98,9 @@ public class MapActivity extends AppCompatActivity {
     }
 
     public void onClickSettings(View view) {
-        Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, SettingsActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        intent.putExtra("pausedStageID", stage.getID());
+        startActivity(intent);
     }
 }
