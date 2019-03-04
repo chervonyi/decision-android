@@ -48,12 +48,12 @@ public class MapActivity extends AppCompatActivity {
         textViewMapChoice1.setVisibility(View.VISIBLE);
         textViewMapChoice2.setVisibility(View.VISIBLE);
 
-        textViewMapChoice1.setText(stage.getText().get(0));
-        textViewMapChoice2.setText(stage.getText().get(1));
+        textViewMapChoice1.setText(stage.getChoices().get(0));
+        textViewMapChoice2.setText(stage.getChoices().get(1));
 
         if (stage.getChoices().size() == 3) {
             textViewMapChoice3.setVisibility(View.VISIBLE);
-            textViewMapChoice3.setText(stage.getText().get(2));
+            textViewMapChoice3.setText(stage.getChoices().get(2));
         } else {
             textViewMapChoice3.setVisibility(View.GONE);
         }
@@ -68,7 +68,7 @@ public class MapActivity extends AppCompatActivity {
             @Override
             public boolean onTouch(View v, MotionEvent e) {
                 if (e.getAction() == MotionEvent.ACTION_UP) {
-                    Dispatcher.send(context, stage.getChoices().get(0));
+                    Dispatcher.send(context, stage.getNextIDforChoices().get(0));
                 }
                 return true;
             }
@@ -78,7 +78,7 @@ public class MapActivity extends AppCompatActivity {
             @Override
             public boolean onTouch(View v, MotionEvent e) {
                 if (e.getAction() == MotionEvent.ACTION_UP) {
-                    Dispatcher.send(context, stage.getChoices().get(1));
+                    Dispatcher.send(context, stage.getNextIDforChoices().get(1));
                 }
                 return true;
             }
@@ -89,7 +89,7 @@ public class MapActivity extends AppCompatActivity {
                 @Override
                 public boolean onTouch(View v, MotionEvent e) {
                     if (e.getAction() == MotionEvent.ACTION_UP) {
-                        Dispatcher.send(context, stage.getChoices().get(2));
+                        Dispatcher.send(context, stage.getNextIDforChoices().get(2));
                     }
                     return true;
                 }

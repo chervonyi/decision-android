@@ -3,6 +3,8 @@ package chrgames.decision.activities;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -48,6 +50,7 @@ public class StageActivity extends AppCompatActivity {
         // Set image on background
         int imageID = getResources().getIdentifier(stage.getImage(), "drawable", getPackageName());
         imageView.setImageResource(imageID);
+
 
         updateButtonSettings();
 

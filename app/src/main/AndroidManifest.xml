@@ -24,7 +24,7 @@
         <activity android:name=".activities.StageActivity" />
         <activity android:name=".activities.MapActivity" />
         <activity android:name=".activities.BlackScreenActivity" />
-        <activity android:name=".activities.SettingsActivity"></activity>
+        <activity android:name=".activities.SettingsActivity"/>
     </application>
 
 </manifest>
