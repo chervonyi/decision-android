@@ -67,7 +67,6 @@ public class XMLParser {
                     String type = xml.getAttributeValue(0);
                     String id = getNextTag("id");
                     Stage stage = plot.get(id);
-
                     switch (type) {
                         case "chapter":
                             stage.setNumberOfChapter(getNextTag("number"));
