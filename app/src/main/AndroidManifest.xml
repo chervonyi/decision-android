@@ -23,7 +23,8 @@
         <activity android:name=".activities.ChapterActivity" />
         <activity android:name=".activities.EndGameActivity" />
         <activity android:name=".activities.StageActivity" />
-        <activity android:name=".activities.MapActivity" />
+        <activity android:name=".activities.MapActivity"
+                  android:screenOrientation="portrait"/>
         <activity android:name=".activities.BlackScreenActivity" />
         <activity android:name=".activities.SettingsActivity"/>
     </application>

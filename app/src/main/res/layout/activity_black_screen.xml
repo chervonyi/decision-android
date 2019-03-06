@@ -19,8 +19,7 @@
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:textColor="@color/fontWhite"
-            android:textAlignment="center"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:text="Some long long long long long long long text, long long long text. Another long long long long long long long text, long long long text."
             />
     </LinearLayout>
