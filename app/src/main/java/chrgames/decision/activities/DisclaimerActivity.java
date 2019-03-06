@@ -1,8 +1,15 @@
 package chrgames.decision.activities;
 
+import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.MotionEvent;
+
+import java.util.Locale;
 
 import chrgames.decision.R;
 import chrgames.decision.components.Dispatcher;
@@ -16,8 +23,6 @@ public class DisclaimerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_disclaimer);
 
-        Settings.getInstance().setContext(this);
-
         // Load plot.xml
         Plot.getInstance().loadPLotFromXMl(this);
 
@@ -28,6 +33,7 @@ public class DisclaimerActivity extends AppCompatActivity {
         String storedLastStage = Settings.getStoredLastStage();
         Plot.getInstance().setLastStage(storedLastStage);
     }
+
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {

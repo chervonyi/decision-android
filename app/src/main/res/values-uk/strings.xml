@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="changeLanguage">Змінити мову</string>
+    <string name="restart">Розпочати заново</string>
+    <string name="resume">Продовжити</string>
+    <string name="endGameText">КІНЕЦЬ</string>
+    <string name="restartButton">Розпочати заново</string>
+    <string name="proposeToRestart">Спробуйте відкрити для себе іншу кінцівку!</string>
+    <string name="info_about_tap">[ Завжди натискайте щоб продовжити ]</string>
+    <string name="disclaimer1">Увага!</string>
+    <string name="disclaimer2">Кожен ваш вибір впливає на розвиток сюжету.</string>
+    <string name="disclaimer3">Робіть свій вибір з розумом!</string>
+</resources>

@@ -1,9 +1,14 @@
 package chrgames.decision.activities;
 
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
+
+import java.util.Locale;
 
 import chrgames.decision.R;
 import chrgames.decision.components.Dispatcher;
@@ -19,46 +24,50 @@ public class LanguageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_language);
 
-        Settings.getInstance().setContext(this);
+        nextID = getIntent().getStringExtra("pausedStageID");
 
-        String pausedStageID = getIntent().getStringExtra("pausedStageID");
+        if (nextID == null) {
+            // Enter point
+            Settings.getInstance().setContext(this);
 
-        if (pausedStageID == null) {
-            int languageID = Settings.getStoredLanguage();
-            if (languageID != -1) {
-                Settings.language = Settings.Language.values()[languageID];
+            Intent intent = new Intent(this, DisclaimerActivity.class);
+            startActivity(intent);
 
-                Intent intent = new Intent(this, DisclaimerActivity.class);
-                startActivity(intent);
-            }
-        } else {
-            nextID = pausedStageID;
         }
+
     }
 
     public void onClickSelectLanguage(View view) {
 
+        // Save new language into phone memory
+        String lang = "en";
         switch (view.getId()) {
             case R.id.buttonLanguageEN:
                 Settings.saveNewLanguage(Settings.Language.ENGLISH);
+                lang = "en";
                 break;
 
             case R.id.buttonLanguageRU:
                 Settings.saveNewLanguage(Settings.Language.RUSSIAN);
+                lang = "ru";
                 break;
 
             case R.id.buttonLanguageUK:
                 Settings.saveNewLanguage(Settings.Language.UKRAINIAN);
+                lang = "uk";
                 break;
         }
 
-        if (nextID != null) {
-            Plot.getInstance().loadScenarioFromXML(this);
-            Dispatcher.send(this, nextID);
-            return;
-        }
+        // Update UI Language
+        Locale myLocale = new Locale(lang);
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = myLocale;
+        res.updateConfiguration(conf, dm);
 
-        Intent intent = new Intent(this, DisclaimerActivity.class);
-        startActivity(intent);
+        // Update scenario with appropriate language
+        Plot.getInstance().loadScenarioFromXML(this);
+        Dispatcher.send(this, nextID);
     }
 }

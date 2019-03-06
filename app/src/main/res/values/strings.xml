@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">Decision</string>
+    <string name="app_name" translatable="false">Decision</string>
+    <string name="englishLanguageButton" translatable="false">ENGLISH</string>
+    <string name="russianLanguageButton" translatable="false">РУССКИЙ</string>
+    <string name="ukrainianLanguageButton" translatable="false">УКРАЇНСЬКА</string>
+
     <string name="disclaimer1">Warning!</string>
     <string name="disclaimer2">Each of your decisions affects the plot.</string>
     <string name="disclaimer3">Make the choice wisely!</string>
@@ -7,10 +11,7 @@
     <string name="proposeToRestart">Try to discover a different ending for yourself!</string>
     <string name="restartButton">Restart</string>
     <string name="endGameText">THE END</string>
-    <string name="englishLanguageButton">ENGLISH</string>
-    <string name="russianLanguageButton">РУССКИЙ</string>
-    <string name="ukrainianLanguageButton">УКРАЇНСЬКА</string>
     <string name="resume">Continue</string>
     <string name="restart">Restart</string>
-    <string name="change_language">Change language</string>
+    <string name="changeLanguage">Change language</string>
 </resources>
