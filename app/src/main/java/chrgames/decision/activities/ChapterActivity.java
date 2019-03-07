@@ -3,8 +3,12 @@ package chrgames.decision.activities;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.TextView;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 
 import chrgames.decision.R;
 import chrgames.decision.components.Dispatcher;
@@ -15,10 +19,21 @@ public class ChapterActivity extends AppCompatActivity {
 
     private Stage currentStage;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chapter);
+
+
+
+        /*
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        } else {
+            Log.d("MY_TEST", "The interstitial wasn't loaded yet.");
+        }*/
+
 
         // Getting extra from intent
         Intent intent = getIntent();

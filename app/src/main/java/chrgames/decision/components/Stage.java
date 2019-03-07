@@ -58,6 +58,14 @@ public class Stage {
         }
     }
 
+    public boolean isNextStageIsChapter() {
+        if (type == Type.SIMPLE) {
+            return Plot.getInstance().getStageById(nextID).type == Type.CHAPTER;
+        }
+
+        return false;
+    }
+
     public void setImage(String image) {
         this.image = image;
     }

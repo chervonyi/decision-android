@@ -6,7 +6,10 @@ import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
+
+import com.google.android.gms.ads.MobileAds;
 
 import java.util.Locale;
 
@@ -28,6 +31,9 @@ public class LanguageActivity extends AppCompatActivity {
 
         if (nextID == null) {
             // Enter point
+            Log.d("MY_TEST", "START POINT");
+            MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
+
             Settings.getInstance().setContext(this);
 
             Intent intent = new Intent(this, DisclaimerActivity.class);

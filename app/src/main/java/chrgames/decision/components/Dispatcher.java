@@ -29,7 +29,6 @@ public class Dispatcher {
         Stage nextStage = Plot.getInstance().getStageById(nextID);
 
 
-        Log.d(TAG, "onTouchEvent: go to " + nextID);
 
         switch (nextStage.getType()) {
             case CHAPTER:
