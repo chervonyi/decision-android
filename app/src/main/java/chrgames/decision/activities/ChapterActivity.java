@@ -26,15 +26,6 @@ public class ChapterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chapter);
 
 
-
-        /*
-        if (mInterstitialAd.isLoaded()) {
-            mInterstitialAd.show();
-        } else {
-            Log.d("MY_TEST", "The interstitial wasn't loaded yet.");
-        }*/
-
-
         // Getting extra from intent
         Intent intent = getIntent();
         currentStage = Plot.getInstance().getStageById(intent.getStringExtra(Dispatcher.NEXT_STAGE_ID_CODE));

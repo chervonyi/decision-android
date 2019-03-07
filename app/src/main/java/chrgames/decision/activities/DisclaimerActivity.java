@@ -21,6 +21,7 @@ public class DisclaimerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Settings.updateLocal(this);
         setContentView(R.layout.activity_disclaimer);
 
         // Load plot.xml

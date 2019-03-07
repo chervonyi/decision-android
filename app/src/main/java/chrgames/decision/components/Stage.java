@@ -60,6 +60,11 @@ public class Stage {
 
     public boolean isNextStageIsChapter() {
         if (type == Type.SIMPLE) {
+            if (nextID.equals("END")) {
+                // Next stage - EndGameActivity.class
+                return false;
+            }
+
             return Plot.getInstance().getStageById(nextID).type == Type.CHAPTER;
         }
 

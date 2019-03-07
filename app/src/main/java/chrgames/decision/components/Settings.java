@@ -42,22 +42,9 @@ public class Settings {
 
         // Check if language had been saved before
         if (langIndex != -1) {
+
             // Set language from phone memory
             language = Language.values()[langIndex];
-
-            String lang = "en";
-            switch (Settings.getLanguage()) {
-                case RUSSIAN: lang = "ru"; break;
-                case UKRAINIAN: lang = "uk"; break;
-            }
-
-            // Update UI views with saved language
-            Locale myLocale = new Locale(lang);
-            Resources res = context.getResources();
-            DisplayMetrics dm = res.getDisplayMetrics();
-            Configuration conf = res.getConfiguration();
-            conf.locale = myLocale;
-            res.updateConfiguration(conf, dm);
 
         } else {
             // Language had not found in phone memory
@@ -73,6 +60,21 @@ public class Settings {
             }
         }
 
+    }
+
+    public static void updateLocal(Context context) {
+        String lang = "en";
+        switch (language) {
+            case RUSSIAN: lang = "ru"; break;
+            case UKRAINIAN: lang = "uk"; break;
+        }
+
+        Locale myLocale = new Locale(lang);
+        Resources res = context.getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = myLocale;
+        res.updateConfiguration(conf, dm);
     }
 
     public static void saveNewLanguage(Language newLanguage) {
