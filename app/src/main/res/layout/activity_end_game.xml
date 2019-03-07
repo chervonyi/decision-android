@@ -19,10 +19,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
-            android:textColor="@color/fontWhite"
+            android:fontFamily="@font/regular"
+            android:text="@string/endGameText"
             android:textAlignment="center"
-            android:textSize="28sp"
-            android:text="@string/endGameText" />
+            android:textColor="@color/fontWhite"
+            android:textSize="28sp" />
 
         <Button
             android:id="@+id/buttonRestart"
@@ -30,21 +31,23 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:background="@color/fontWhite"
-            android:textSize="16sp"
+            android:fontFamily="@font/regular"
+            android:onClick="onClickRestart"
             android:text="@string/restartButton"
-            android:onClick="onClickRestart"/>
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/textViewPropose"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/fontLightGrey"
-            android:layout_marginTop="100dp"
             android:layout_marginLeft="60dp"
+            android:layout_marginTop="100dp"
             android:layout_marginRight="60dp"
+            android:fontFamily="@font/regular"
+            android:text="@string/proposeToRestart"
             android:textAlignment="center"
-            android:textSize="16sp"
-            android:text="@string/proposeToRestart" />
+            android:textColor="@color/fontLightGrey"
+            android:textSize="16sp" />
 
     </LinearLayout>
 

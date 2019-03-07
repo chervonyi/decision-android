@@ -27,22 +27,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:textColor="@color/fontWhite"
+                android:fontFamily="@font/regular"
+                android:text="CHAPTER 1"
                 android:textAlignment="center"
-                android:textSize="28sp"
-                android:text="CHAPTER 1" />
+                android:textColor="@color/fontWhite"
+                android:textSize="28sp" />
 
             <TextView
                 android:id="@+id/textViewTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
                 android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginRight="50dp"
-                android:textColor="@color/fontWhite"
+                android:fontFamily="@font/regular"
+                android:text="Sample of title"
                 android:textAlignment="center"
-                android:textSize="26sp"
-                android:text="Sample of title" />
+                android:textColor="@color/fontWhite"
+                android:textSize="26sp" />
 
 
         </LinearLayout>
@@ -57,10 +59,11 @@
                 android:id="@+id/textViewChapterDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/fontWhite"
+                android:fontFamily="@font/regular"
+                android:text="10th October 1931"
                 android:textAlignment="center"
-                android:textSize="20sp"
-                android:text="10th October 1931" />
+                android:textColor="@color/fontWhite"
+                android:textSize="20sp" />
         </LinearLayout>
     </LinearLayout>
 

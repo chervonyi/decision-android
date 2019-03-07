@@ -33,55 +33,59 @@
                 android:id="@+id/textViewMainBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="@color/fontWhite"
-                android:padding="20dp"
                 android:background="@color/backgroundTextBox"
+                android:fontFamily="@font/regular"
+                android:padding="20dp"
                 android:text="    — Марк, скільки вже? — запитав я.
-    — 47 днів — неохоче, сонним голосом відповів Марк." />
+    — 47 днів — неохоче, сонним голосом відповів Марк."
+                android:textColor="@color/fontWhite"
+                android:textSize="17sp" />
 
 
             <TextView
                 android:id="@+id/textViewChoice1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textSize="16sp"
-                android:textColor="@color/fontWhite"
-                android:padding="20dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
                 android:background="@drawable/choice_button"
-                android:text="Choice 1"/>
+                android:fontFamily="@font/regular"
+                android:padding="20dp"
+                android:text="Choice 1"
+                android:textAlignment="center"
+                android:textColor="@color/fontWhite"
+                android:textSize="17sp" />
 
             <TextView
                 android:id="@+id/textViewChoice2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textSize="16sp"
-                android:textColor="@color/fontWhite"
-                android:padding="20dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
                 android:background="@drawable/choice_button"
-                android:text="Choice 2"/>
+                android:fontFamily="@font/regular"
+                android:padding="20dp"
+                android:text="Choice 2"
+                android:textAlignment="center"
+                android:textColor="@color/fontWhite"
+                android:textSize="17sp" />
 
             <TextView
                 android:id="@+id/textViewChoice3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textSize="16sp"
-                android:textColor="@color/fontWhite"
-                android:padding="20dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
                 android:background="@drawable/choice_button"
-                android:text="Choice 3"/>
+                android:fontFamily="@font/regular"
+                android:padding="20dp"
+                android:text="Choice 3"
+                android:textAlignment="center"
+                android:textColor="@color/fontWhite"
+                android:textSize="17sp" />
 
 
 

@@ -21,9 +21,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:background="@color/fontWhite"
-            android:textSize="16sp"
+            android:fontFamily="@font/regular"
+            android:onClick="onClickSelectLanguage"
             android:text="@string/englishLanguageButton"
-            android:onClick="onClickSelectLanguage"/>
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/buttonLanguageRU"
@@ -31,9 +32,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:background="@color/fontWhite"
-            android:textSize="16sp"
+            android:fontFamily="@font/regular"
+            android:onClick="onClickSelectLanguage"
             android:text="@string/russianLanguageButton"
-            android:onClick="onClickSelectLanguage"/>
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/buttonLanguageUK"
@@ -41,9 +43,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:background="@color/fontWhite"
-            android:textSize="16sp"
+            android:fontFamily="@font/regular"
+            android:onClick="onClickSelectLanguage"
             android:text="@string/ukrainianLanguageButton"
-            android:onClick="onClickSelectLanguage"/>
+            android:textSize="16sp" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

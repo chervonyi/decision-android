@@ -31,36 +31,39 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:textAlignment="center"
-                android:textSize="18sp"
-                android:textColor="@color/fontWhite"
-                android:padding="10dp"
                 android:background="@drawable/choice_button"
-                android:text="Піти через Ліс"/>
+                android:fontFamily="@font/regular"
+                android:padding="10dp"
+                android:text="Піти через Ліс"
+                android:textAlignment="center"
+                android:textColor="@color/fontWhite"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textViewMapChoice2"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:textAlignment="center"
-                android:textSize="18sp"
-                android:textColor="@color/fontWhite"
-                android:padding="10dp"
                 android:background="@drawable/choice_button"
-                android:text="Піти у Сейнт-Вілоу"/>
+                android:fontFamily="@font/regular"
+                android:padding="10dp"
+                android:text="Піти у Сейнт-Вілоу"
+                android:textAlignment="center"
+                android:textColor="@color/fontWhite"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textViewMapChoice3"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:textAlignment="center"
-                android:textSize="18sp"
-                android:textColor="@color/fontWhite"
-                android:padding="10dp"
                 android:background="@drawable/choice_button"
-                android:text="Спробувати врятувати когось із табора Егелчайл"/>
+                android:fontFamily="@font/regular"
+                android:padding="10dp"
+                android:text="Спробувати врятувати когось із табора Егелчайл"
+                android:textAlignment="center"
+                android:textColor="@color/fontWhite"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
