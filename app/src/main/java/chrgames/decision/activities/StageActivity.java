@@ -70,8 +70,16 @@ public class StageActivity extends AppCompatActivity {
         // Load ad
         if (stage.isNextStageIsChapter()) {
             mInterstitialAd = new InterstitialAd(this);
-            mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
-            mInterstitialAd.loadAd(new AdRequest.Builder().build());
+            mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712"); // SAMPLE FROM GOOGLE
+            //mInterstitialAd.setAdUnitId("ca-app-pub-1247855442494877/9090434848"); // My UnitAd ID
+            //mInterstitialAd.setAdUnitId("ca-app-pub-1247855442494877/9090434848");
+            //mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+            AdRequest request = new AdRequest.Builder()
+                    .addTestDevice("FAEC0F5443638FEA1C75F6A434A9BA73")  // MY DEVICE ID
+                    .build();
+
+            mInterstitialAd.loadAd(request);
 
             mInterstitialAd.setAdListener(new com.google.android.gms.ads.AdListener() {
                 @Override
