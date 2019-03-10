@@ -26,16 +26,24 @@ public class SettingsActivity extends AppCompatActivity {
 
     public void onClickResume(View view) {
         Dispatcher.send(this, pauesdStageID);
+        finish();
     }
 
     public void onClickRestart(View view) {
         Plot.getInstance().restartGame();
         Dispatcher.start(this);
+        finish();
     }
 
     public void onClickChangeLanguage(View view) {
         Intent intent = new Intent(this, LanguageActivity.class);
         intent.putExtra("pausedStageID", pauesdStageID);
         startActivity(intent);
+        finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
     }
 }

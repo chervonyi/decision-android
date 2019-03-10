@@ -38,7 +38,7 @@ public class LanguageActivity extends AppCompatActivity {
 
             Intent intent = new Intent(this, DisclaimerActivity.class);
             startActivity(intent);
-
+            finish();
         }
 
     }
@@ -64,6 +64,8 @@ public class LanguageActivity extends AppCompatActivity {
                 break;
         }
 
+        // TODO: Change this segment of code on static method from Setting.class
+
         // Update UI Language
         Locale myLocale = new Locale(lang);
         Resources res = getResources();
@@ -75,5 +77,11 @@ public class LanguageActivity extends AppCompatActivity {
         // Update scenario with appropriate language
         Plot.getInstance().loadScenarioFromXML(this);
         Dispatcher.send(this, nextID);
+        finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
     }
 }

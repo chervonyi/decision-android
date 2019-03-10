@@ -22,5 +22,11 @@ public class EndGameActivity extends AppCompatActivity {
     public void onClickRestart(View view) {
         Plot.getInstance().restartGame();
         Dispatcher.start(this);
+        finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
     }
 }

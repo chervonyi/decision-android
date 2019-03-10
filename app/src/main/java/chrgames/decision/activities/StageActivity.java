@@ -3,16 +3,12 @@ package chrgames.decision.activities;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
@@ -47,7 +43,7 @@ public class StageActivity extends AppCompatActivity {
 
         // Getting extra
         Intent intent = getIntent();
-        stage = Plot.getInstance().getStageById(intent.getStringExtra(Dispatcher.NEXT_STAGE_ID_CODE));
+        stage = Plot.getInstance().moveToNextStage(intent.getStringExtra(Dispatcher.NEXT_STAGE_ID));
 
         ImageView imageView = findViewById(R.id.imageView);
         textViewMainBox = findViewById(R.id.textViewMainBox);
@@ -58,7 +54,6 @@ public class StageActivity extends AppCompatActivity {
         // Set image on background
         int imageID = getResources().getIdentifier(stage.getImage(), "drawable", getPackageName());
         imageView.setImageResource(imageID);
-
 
         updateButtonSettings();
 
@@ -84,9 +79,9 @@ public class StageActivity extends AppCompatActivity {
                 public void onAdClosed() {
                     // Show next stage
                     Dispatcher.send(context, stage.getNextID());
+                    finish();
                 }
             });
-
         }
     }
 
@@ -98,6 +93,7 @@ public class StageActivity extends AppCompatActivity {
                 public boolean onTouch(View v, MotionEvent e) {
                     if (e.getAction() == MotionEvent.ACTION_UP) {
                         Dispatcher.send(context, stage.getNextIDforChoices().get(0));
+                        finish();
                     }
 
                     return true;
@@ -109,6 +105,7 @@ public class StageActivity extends AppCompatActivity {
                 public boolean onTouch(View v, MotionEvent e) {
                     if (e.getAction() == MotionEvent.ACTION_UP) {
                         Dispatcher.send(context, stage.getNextIDforChoices().get(1));
+                        finish();
                     }
                     return true;
                 }
@@ -120,6 +117,7 @@ public class StageActivity extends AppCompatActivity {
                     public boolean onTouch(View v, MotionEvent e) {
                         if (e.getAction() == MotionEvent.ACTION_UP) {
                             Dispatcher.send(context, stage.getNextIDforChoices().get(2));
+                            finish();
                         }
 
                         return true;
@@ -139,6 +137,7 @@ public class StageActivity extends AppCompatActivity {
                                 mInterstitialAd.show();
                             } else {
                                 Dispatcher.send(context, stage.getNextID());
+                                finish();
                             }
                         }
                         return true;
@@ -183,6 +182,11 @@ public class StageActivity extends AppCompatActivity {
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         intent.putExtra("pausedStageID", stage.getID());
         startActivity(intent);
+    }
+
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
     }
 }
 

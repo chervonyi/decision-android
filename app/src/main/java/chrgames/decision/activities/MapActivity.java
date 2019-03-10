@@ -9,7 +9,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import chrgames.decision.R;
 import chrgames.decision.components.Dispatcher;
@@ -35,7 +34,7 @@ public class MapActivity extends AppCompatActivity {
         context = this;
 
         Intent intent = getIntent();
-        stage = Plot.getInstance().getStageById(intent.getStringExtra(Dispatcher.NEXT_STAGE_ID_CODE));
+        stage = Plot.getInstance().moveToNextStage(intent.getStringExtra(Dispatcher.NEXT_STAGE_ID));
 
         ImageView imageView = findViewById(R.id.imageView2);
         textViewMapChoice1 = findViewById(R.id.textViewMapChoice1);
@@ -69,6 +68,7 @@ public class MapActivity extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent e) {
                 if (e.getAction() == MotionEvent.ACTION_UP) {
                     Dispatcher.send(context, stage.getNextIDforChoices().get(0));
+                    finish();
                 }
                 return true;
             }
@@ -79,6 +79,7 @@ public class MapActivity extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent e) {
                 if (e.getAction() == MotionEvent.ACTION_UP) {
                     Dispatcher.send(context, stage.getNextIDforChoices().get(1));
+                    finish();
                 }
                 return true;
             }
@@ -90,6 +91,7 @@ public class MapActivity extends AppCompatActivity {
                 public boolean onTouch(View v, MotionEvent e) {
                     if (e.getAction() == MotionEvent.ACTION_UP) {
                         Dispatcher.send(context, stage.getNextIDforChoices().get(2));
+                        finish();
                     }
                     return true;
                 }
@@ -102,5 +104,10 @@ public class MapActivity extends AppCompatActivity {
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         intent.putExtra("pausedStageID", stage.getID());
         startActivity(intent);
+    }
+
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
     }
 }

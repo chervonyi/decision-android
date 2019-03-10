@@ -41,8 +41,14 @@ public class DisclaimerActivity extends AppCompatActivity {
 
         if (event.getAction() == MotionEvent.ACTION_UP) {
             Dispatcher.start(this);
+            finish();
         }
 
         return super.onTouchEvent(event);
+    }
+
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
     }
 }

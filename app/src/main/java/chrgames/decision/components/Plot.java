@@ -21,10 +21,14 @@ public class Plot {
 
     public HashMap<String, Stage> getPlot() { return vault; }
 
-    public Stage getStageById(String idOfStage) {
+    public Stage moveToNextStage(String idOfStage) {
         lastStage = idOfStage;
         Settings.saveLastStage(idOfStage);
         return vault.get(idOfStage);
+    }
+
+    public Stage getStageByID(String id) {
+        return vault.get(id);
     }
 
     public String getLastStage() {

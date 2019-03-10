@@ -3,12 +3,8 @@ package chrgames.decision.activities;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.TextView;
-
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
 
 import chrgames.decision.R;
 import chrgames.decision.components.Dispatcher;
@@ -28,7 +24,7 @@ public class ChapterActivity extends AppCompatActivity {
 
         // Getting extra from intent
         Intent intent = getIntent();
-        currentStage = Plot.getInstance().getStageById(intent.getStringExtra(Dispatcher.NEXT_STAGE_ID_CODE));
+        currentStage = Plot.getInstance().moveToNextStage(intent.getStringExtra(Dispatcher.NEXT_STAGE_ID));
 
         // Set content
         TextView textViewChapterNumber = findViewById(R.id.textViewChapterNumber);
@@ -47,8 +43,14 @@ public class ChapterActivity extends AppCompatActivity {
 
         if (event.getAction() == MotionEvent.ACTION_UP) {
             Dispatcher.send(this, currentStage.getNextID());
+            finish();
         }
 
         return super.onTouchEvent(event);
+    }
+
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
     }
 }

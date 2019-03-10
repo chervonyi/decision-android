@@ -1,8 +1,5 @@
 package chrgames.decision.components;
 
-import android.util.Log;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Stage {
@@ -65,7 +62,7 @@ public class Stage {
                 return false;
             }
 
-            return Plot.getInstance().getStageById(nextID).type == Type.CHAPTER;
+            return Plot.getInstance().getStageByID(nextID).type == Type.CHAPTER;
         }
 
         return false;

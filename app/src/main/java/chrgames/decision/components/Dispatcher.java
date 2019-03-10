@@ -13,8 +13,7 @@ import chrgames.decision.activities.StageActivity;
 public class Dispatcher {
     private static final String TAG = "MY_TEST";
 
-    public static final String NEXT_STAGE_ID_CODE = "idOfNextStage";
-
+    public static final String NEXT_STAGE_ID = "idOfNextStage";
 
     public static void send(Context context, String nextID) {
 
@@ -26,9 +25,7 @@ public class Dispatcher {
             return;
         }
 
-        Stage nextStage = Plot.getInstance().getStageById(nextID);
-
-
+        Stage nextStage = Plot.getInstance().moveToNextStage(nextID);
 
         switch (nextStage.getType()) {
             case CHAPTER:
@@ -57,7 +54,7 @@ public class Dispatcher {
                 intent = new Intent(context, StageActivity.class);
         }
 
-        intent.putExtra(NEXT_STAGE_ID_CODE, nextID);
+        intent.putExtra(NEXT_STAGE_ID, nextID);
         context.startActivity(intent);
     }
 

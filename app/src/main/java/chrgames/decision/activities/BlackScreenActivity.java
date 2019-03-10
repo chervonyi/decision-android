@@ -21,7 +21,7 @@ public class BlackScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_black_screen);
 
         Intent intent = getIntent();
-        stage = Plot.getInstance().getStageById(intent.getStringExtra(Dispatcher.NEXT_STAGE_ID_CODE));
+        stage = Plot.getInstance().moveToNextStage(intent.getStringExtra(Dispatcher.NEXT_STAGE_ID));
 
         TextView textViewBlackScreenText = findViewById(R.id.textViewBlackScreenText);
         textViewBlackScreenText.setText(stage.getText().get(0));
@@ -32,8 +32,14 @@ public class BlackScreenActivity extends AppCompatActivity {
 
         if (event.getAction() == MotionEvent.ACTION_UP) {
             Dispatcher.send(this, stage.getNextID());
+            finish();
         }
 
         return super.onTouchEvent(event);
+    }
+
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
     }
 }
