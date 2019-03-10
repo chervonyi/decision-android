@@ -62,6 +62,7 @@ public class Settings {
 
     }
 
+    // Set Local in accordance to selected language
     public static void updateLocal(Context context) {
         String lang = "en";
         switch (language) {

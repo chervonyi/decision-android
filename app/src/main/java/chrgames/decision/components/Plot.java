@@ -59,7 +59,7 @@ public class Plot {
 
         // TODO: Change UK to EN, RU when it will be imported
         switch (Settings.getLanguage()) {
-            case ENGLISH: xmlFile = context.getResources().getXml(R.xml.scenario_uk); break;
+            case ENGLISH: xmlFile = context.getResources().getXml(R.xml.scenario_en); break;
             case RUSSIAN: xmlFile = context.getResources().getXml(R.xml.scenario_ru); break;
             case UKRAINIAN: xmlFile = context.getResources().getXml(R.xml.scenario_uk); break;
             default: xmlFile = context.getResources().getXml(R.xml.scenario_uk); break;
