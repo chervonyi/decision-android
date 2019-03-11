@@ -3,7 +3,7 @@
     <string name="disclaimer1">Внимание!</string>
     <string name="disclaimer2">Каждый ваш выбор влияет на развитие сюжета.</string>
     <string name="disclaimer3">Делайте выбор с умом!</string>
-    <string name="info_about_tap">[ Всегда нажимайте чтобы продолжить ]</string>
+    <string name="info_about_tap">Всегда нажимайте на текст чтобы продолжить</string>
     <string name="proposeToRestart">Попробуйте открыть для себя другую концовку!</string>
     <string name="restartButton">Начать заново</string>
     <string name="endGameText">КОНЕЦ</string>

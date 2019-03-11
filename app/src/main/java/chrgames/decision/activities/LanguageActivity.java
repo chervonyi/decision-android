@@ -31,8 +31,7 @@ public class LanguageActivity extends AppCompatActivity {
 
         if (nextID == null) {
             // Enter point
-            Log.d("MY_TEST", "START POINT");
-            MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
+            MobileAds.initialize(this, "ca-app-pub-1247855442494877~9519300949");
 
             Settings.getInstance().setContext(this);
 
@@ -45,34 +44,19 @@ public class LanguageActivity extends AppCompatActivity {
 
     public void onClickSelectLanguage(View view) {
 
-        // Save new language into phone memory
-        String lang = "en";
         switch (view.getId()) {
             case R.id.buttonLanguageEN:
                 Settings.saveNewLanguage(Settings.Language.ENGLISH);
-                lang = "en";
                 break;
 
             case R.id.buttonLanguageRU:
                 Settings.saveNewLanguage(Settings.Language.RUSSIAN);
-                lang = "ru";
                 break;
 
             case R.id.buttonLanguageUK:
                 Settings.saveNewLanguage(Settings.Language.UKRAINIAN);
-                lang = "uk";
                 break;
         }
-
-        // TODO: Change this segment of code on static method from Setting.class
-
-        // Update UI Language
-        Locale myLocale = new Locale(lang);
-        Resources res = getResources();
-        DisplayMetrics dm = res.getDisplayMetrics();
-        Configuration conf = res.getConfiguration();
-        conf.locale = myLocale;
-        res.updateConfiguration(conf, dm);
 
         // Update scenario with appropriate language
         Plot.getInstance().loadScenarioFromXML(this);

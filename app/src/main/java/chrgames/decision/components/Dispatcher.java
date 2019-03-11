@@ -11,7 +11,6 @@ import chrgames.decision.activities.MapActivity;
 import chrgames.decision.activities.StageActivity;
 
 public class Dispatcher {
-    private static final String TAG = "MY_TEST";
 
     public static final String NEXT_STAGE_ID = "idOfNextStage";
 
@@ -29,28 +28,23 @@ public class Dispatcher {
 
         switch (nextStage.getType()) {
             case CHAPTER:
-                Log.d(TAG, "send: ChapterActivity");
                 intent = new Intent(context, ChapterActivity.class);
                 break;
 
             case SIMPLE:
             case CHOICE:
-                Log.d(TAG, "send: StageActivity");
                 intent = new Intent(context, StageActivity.class);
                 break;
 
             case BLACK:
-                Log.d(TAG, "send: BlackScreenActivity");
                 intent = new Intent(context, BlackScreenActivity.class);
                 break;
 
             case MAP:
-                Log.d(TAG, "send: MapActivity");
                 intent = new Intent(context, MapActivity.class);
                 break;
 
             default:
-                Log.d(TAG, "send: default");
                 intent = new Intent(context, StageActivity.class);
         }
 

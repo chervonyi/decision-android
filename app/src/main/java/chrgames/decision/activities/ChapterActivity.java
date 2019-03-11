@@ -21,7 +21,6 @@ public class ChapterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chapter);
 
-
         // Getting extra from intent
         Intent intent = getIntent();
         currentStage = Plot.getInstance().moveToNextStage(intent.getStringExtra(Dispatcher.NEXT_STAGE_ID));
@@ -35,7 +34,6 @@ public class ChapterActivity extends AppCompatActivity {
 
         TextView textViewChapterDate = findViewById(R.id.textViewChapterDate);
         textViewChapterDate.setText("");
-
     }
 
     @Override

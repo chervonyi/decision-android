@@ -10,7 +10,7 @@
 
     <!-- FONTS -->
     <color name="fontWhite">#efefef</color>
-    <color name="fontLightGrey">#868484</color>
+    <color name="fontLightGrey">#5C5C5C</color>
 
     <!-- OTHER -->
     <color name="transparent">#00ffffff</color>
